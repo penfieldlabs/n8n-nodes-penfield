@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-penfield",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "n8n node for Penfield: long-term memory and a knowledge graph for AI agents and workflows",
 	"license": "MIT",
 	"homepage": "https://github.com/penfieldlabs/n8n-nodes-penfield#readme",

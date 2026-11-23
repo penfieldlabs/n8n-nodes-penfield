@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1
+
+No changes to the node.
+
+- Releases are now published through npm trusted publishing, with no npm token stored in the repository.
+- The publish workflow refuses a tag that does not match the package.json version or that points at a commit which is not on main.
+
 ## 0.1.0
 
 First release.
