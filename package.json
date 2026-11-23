@@ -1,0 +1,67 @@
+{
+	"name": "n8n-nodes-penfield",
+	"version": "0.1.0",
+	"description": "n8n node for Penfield: long-term memory and a knowledge graph for AI agents and workflows",
+	"license": "MIT",
+	"homepage": "https://github.com/penfieldlabs/n8n-nodes-penfield#readme",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"penfield",
+		"memory",
+		"knowledge-graph",
+		"ai-agent",
+		"long-term-memory"
+	],
+	"author": {
+		"name": "Penfield",
+		"email": "support@penfield.app",
+		"url": "https://www.penfield.app"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/penfieldlabs/n8n-nodes-penfield.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease",
+		"test": "node --test \"test/**/*.test.js\""
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"dist",
+		"!dist/tsconfig.tsbuildinfo",
+		"!dist/**/*.map"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/PenfieldApi.credentials.js",
+			"dist/credentials/PenfieldOAuth2Api.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Penfield/Penfield.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "0.57.4",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^21.1.0",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	},
+	"bugs": {
+		"url": "https://github.com/penfieldlabs/n8n-nodes-penfield/issues"
+	}
+}
